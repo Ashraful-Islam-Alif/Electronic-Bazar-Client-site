@@ -2,8 +2,8 @@ import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import auth from '../../firebase.init'
-import logo from '../../images/logo1.png'
+import auth from '../../../firebase.init'
+import logo from '../../../images/logo1.png'
 import { signOut } from 'firebase/auth';
 
 
@@ -21,7 +21,7 @@ const Header = () => {
                         height="30"
                         className="d-inline-block align-top"
                         alt="React Bootstrap logo"
-                    />laptop Bazar</Navbar.Brand>
+                    />Electronics Bazar</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
