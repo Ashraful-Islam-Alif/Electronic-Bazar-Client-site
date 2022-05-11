@@ -1,0 +1,110 @@
+[
+    {
+        "_id": 1,
+        "supplier": "Rikal",
+        "email": "rakib@gmail.com",
+        "price": "$999",
+        "stock": 75,
+        "img": "https://i.ibb.co/tzVKTmL/Inventory1.jpg",
+        "name": "iPhone 12pro",
+        "details": "A dramatically more powerful camera system. A display so responsive, every interaction feels new again. The world’s fastest smartphone chip. Exceptional durability. And a huge leap in battery life."
+    },
+    {
+        "_id": 2,
+        "supplier": "Missan",
+        "email": "missan@gmail.com",
+        "price": "$699",
+        "stock": 75,
+        "img": "https://i.ibb.co/HgkMhHj/Inventory2.jpg",
+        "name": "Samsung Galaxy S22 Ultra ",
+        "details": "As part of our efforts to reach our environmental goals, iPhone 11 does not include a power adapter or EarPods. Included in the box is a USB‑C to Lightning cable that supports fast charging and is compatible with USB‑C power adapters and computer ports."
+    },
+    {
+        "_id": 3,
+        "supplier": "Yasir",
+        "email": "yasir@gmail.com",
+        "price": "$1299",
+        "stock": 50,
+        "img": "https://i.ibb.co/41Xfntb/Inventory3.jpg",
+        "name": "Apple Macbook Pro 2020 ",
+        "details": "The Apple M1 chip gives the 13‑inch MacBook Pro speed and power beyond belief. With up to 2.8x CPU performance. Up to 5x the graphics speed. "
+    },
+    {
+        "_id": 4,
+        "supplier": "Khilam",
+        "email": "khilam@gmail.com",
+        "price": "$1099",
+        "stock": 40,
+        "img": "https://i.ibb.co/KjtwqLJ/Inventory4.jpg",
+        "name": "HP Laptop",
+        "details": "The HP 15s-du1116TU comes with Intel Pentium Silver N5030 Processor (4M Cache, 1.10 GHz up to 3.10 GHz) with Intel UHD Graphics 605."
+    },
+    {
+        "_id": 5,
+        "supplier": "Manout",
+        "email": "manout@gmail.com",
+        "price": "$399",
+        "stock": 50,
+        "img": "https://i.ibb.co/XpCpmYM/Inventory5.jpg",
+        "name": "Apple Watch Series 7 Sports Band",
+        "details": "Big screen. Huge impact. The challenge was to create a bigger display while barely expanding the dimensions of the watch itself."
+    },
+    {
+        "_id": 6,
+        "supplier": "Rubel",
+        "email": "rubel@gmail.com",
+        "price": "$250",
+        "stock": "30",
+        "img": "https://i.ibb.co/zSpfrKc/Inventory6.jpg",
+        "name": "Xiaomi Mibro Color Smart Watch",
+        "details": "Xiaomi Mibro RS4 LS12 featured with 1.78 (368 x 448) AMOLED HD display, 12 workout modes, Alipay Offline Payment, IP68 waterproof, SpO2 tracking, 10 days battery life"
+    },
+    {
+        "name": "iPhone 13pro",
+        "details": "The iPhone 13 Pro display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.06 inches diagonally (actual viewable area is less).",
+        "supplier": "Reja",
+        "img": "https://i.ibb.co/xXT1NS4/phone1.jpg"
+    },
+    {
+        "name": "Samsung Galaxy S22 Ultra",
+        "details": " Dual Pixel autofocus, Exposure compensation, ISO control, Continuos Shooting, Auto Flash, Face detection, Touch to focus.",
+        "supplier": "Libriya",
+        "img": "https://i.ibb.co/WgWndLf/phone2.jpg"
+    },
+    {
+        "name": "iPhone XR",
+        "details": "Quad-LED dual-tone flash, HDR (photo/panorama).",
+        "supplier": "Rajuren",
+        "img": "https://i.ibb.co/Vt41Nh7/phone3.jpg"
+    },
+    {
+        "name": "Samsung Galaxy A32",
+        "details": " Continuos Shooting, High Dynamic Range mode (HDR), Digital Zoom, Auto Flash, Digital image stabilization, Touch to focus.",
+        "supplier": "Alinare",
+        "img": "https://i.ibb.co/FJKpqWJ/phone4.jpg"
+    },
+    {
+        "name": "Apple MacBook Air 13.3-Inch Retina Display 8-core Apple M1 chip with 8GB RAM, 256GB SSD (MGN63) Space Gray",
+        "details": " Digital Zoom, Auto Flash, Digital image stabilization, Touch to focus, LED flash, panorama.",
+        "supplier": "Rima",
+        "img": "https://i.ibb.co/KjtwqLJ/Inventory4.jpg"
+    },
+    {
+        "name": "Apple MacBook Pro 14-Inch M1 Pro Chip, 16GB RAM, 512GB SSD (MKGP3LL/A) Space Gray 2021",
+        "details": " ISO control, Continuos Shooting, High Dynamic Range mode (HDR), Digital Zoom, Auto Flash",
+        "supplier": "Rabem",
+        "img": "https://i.ibb.co/DRQy3vm/laptop2.jpg"
+    },
+    {
+        "name": "HP 14s-dq4458TU Core i5 11th Gen 14 FHD Laptop",
+        "details": "Digital Zoom, Auto Flash, Digital image stabilization, Touch to focus, LED flash, panorama.",
+        "supplier": "Elani",
+        "img": "https://i.ibb.co/yN52Yrc/laptop3.jpg"
+    },
+    {
+        "name": "HP 15s-du3561TU Core i5 11th Gen 15.6 FHD Laptop",
+        "details": " ISO control, Continuos Shooting,  Touch to focus, LED flash, panorama.",
+        "supplier": "Progrity",
+        "img": "https://i.ibb.co/hdycM0t/laptop4.jpg"
+    }
+]

@@ -13,7 +13,7 @@ const Header = () => {
         signOut(auth);
     }
     return (
-        <div className='container'>
+        <div className='container mx-auto'>
             <Navbar collapseOnSelect sticky='top' expand="lg" bg="dark" variant="dark">
                 <Container>
                     <Navbar.Brand as={Link} to="/"><img
@@ -21,17 +21,24 @@ const Header = () => {
                         height="30"
                         className="d-inline-block align-top"
                         alt="React Bootstrap logo"
-                    />Electronics Bazar</Navbar.Brand>
+                    /></Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
                             <Nav.Link as={Link} to="/">Home</Nav.Link>
-                            <Nav.Link href='home#items'>Items</Nav.Link>
+
 
                         </Nav>
                         <Nav>
                             <Nav.Link as={Link} to="/blogs">Blogs</Nav.Link>
-                            <Nav.Link as={Link} to="/about">About Me</Nav.Link>
+                            {
+                                user && <>
+                                    <Nav.Link as={Link} to="/manageItems">Manage Items</Nav.Link>
+                                    <Nav.Link as={Link} to="/inventory">Add Item</Nav.Link>
+                                    <Nav.Link as={Link} to="/myItems">My Items</Nav.Link>
+                                </>
+
+                            }
                             {user ?
                                 <button className='btn btn-link text-white text-decoration-none' onClick={handleSignOut}>Sign Out</button>
                                 :

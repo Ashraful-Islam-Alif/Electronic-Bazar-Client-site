@@ -8,14 +8,14 @@ const Footer = () => {
                     <h2>Electronics Bazar</h2>
                     <div className='col-sm-6'>
 
-                        <h4>Contact Us</h4>
+                        <h4>Support</h4>
                         <p>+8801671627637</p>
                     </div>
                     <div className='col-sm-6'>
-                        <h4>Address</h4>
+                        <h4>Stay Connected</h4>
                         <p>House: 65, Hilali king, Bangladesh</p>
                     </div>
-
+                    <hr />
                     <p>Copyright Ashraful Islam Alif @2022</p>
 
                 </div>
