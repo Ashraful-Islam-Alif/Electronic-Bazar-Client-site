@@ -11,7 +11,7 @@ const Inventory = () => {
     }, [])
     return (
         <div className='container mb-5'>
-            <h1 className='text-center m-5'>Inventory</h1>
+            <h1 className='text-primary fw-bold fst-italic text-center m-5'>Inventory</h1>
 
             <div className="row ">
                 {

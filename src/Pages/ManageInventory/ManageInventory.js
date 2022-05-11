@@ -12,21 +12,24 @@ const ManageInventory = () => {
             .then(data => setProducts(data))
     }, [])
     const handleToDelete = id => {
-        const url = `http://localhost:5000/inventory/${id}`;
-        fetch(url, {
-            method: 'DELETE'
-        })
-            .then(res => res.json())
-            .then(data => {
-                if (data.deletedCount > 0) {
-                    const remaining = products.filter(product => product._id !== id)
-                    setProducts(remaining)
-                }
+        const proceed = window.confirm('Will you delete a products???...')
+        if (proceed) {
+            const url = `http://localhost:5000/inventory/${id}`;
+            fetch(url, {
+                method: 'DELETE'
             })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount > 0) {
+                        const remaining = products.filter(product => product._id !== id)
+                        setProducts(remaining)
+                    }
+                })
+        }
     }
     return (
         <div className=" container">
-            <h2 className='text-center m-5 animate__animated animate__heartBeat'>Manage Inventories</h2>
+            <h2 className='text-primary text-center m-4 fw-bold m-5 animate__animated animate__heartBeat'>Manage Inventories</h2>
             <div className=' mx-auto row row-cols-1  row-cols-lg-3 row-cols-md-2 g-4'>
                 {
                     products.map(product =>
