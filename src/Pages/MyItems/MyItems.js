@@ -2,11 +2,13 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import { useNavigate } from "react-router-dom";
+import { signOut } from 'firebase/auth';
 
 const MyItems = () => {
     const [products, setProducts] = useState([])
     const [user] = useAuthState(auth)
-
+    const navigate = useNavigate()
     // useEffect(() => {
     //     const url = `http://localhost:5000/inventoryManage`;
     //     fetch(url)
@@ -19,8 +21,21 @@ const MyItems = () => {
             const email = user.email;
             console.log(email);
             const url = `http://localhost:5000/myItems?email=${email}`;
-            const { data } = await axios.get(url)
-            setProducts(data)
+            try {
+                const { data } = await axios.get(url, {
+                    headers: {
+                        authorization: `Bearer ${localStorage.getItem('accessToken')}`
+                    }
+                })
+                setProducts(data)
+            }
+            catch (error) {
+                console.log(error.message);
+                if (error.response.status === 401 || error.response.status === 403) {
+                    navigate('/login');
+                    signOut(auth)
+                }
+            }
         }
         getProducts()
 

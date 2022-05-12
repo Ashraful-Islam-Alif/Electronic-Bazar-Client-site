@@ -87,7 +87,7 @@ const Login = () => {
             <p>Forget Password? <button className='btn btn-link text-info text-decoration-none' onClick={resetPassword}>Reset</button></p>
             <p>New to Electronics Bazaar? <Link to='/register' className='text-info text-decoration-none' onClick={navigateRegister}>Please Register</Link></p>
             <SocialLogin></SocialLogin>
-            <ToastContainer />
+
         </div>
     );
 };
