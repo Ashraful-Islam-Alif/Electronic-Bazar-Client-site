@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 import './App.css';
 import Login from './Login/Login/Login';
 import Register from './Login/Register/Register';
@@ -26,7 +27,7 @@ function App() {
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/manageItems' element={<ManageItems></ManageItems>}></Route>
-        <Route path='/addItem' element={<AddItem></AddItem>}></Route>
+        <Route path='/addItems' element={<AddItem></AddItem>}></Route>
         <Route path='/inventory' element={<ManageInventory></ManageInventory>}></Route>
         <Route path='/inventory/:itemId' element={
           <RequireAuth>
@@ -41,6 +42,7 @@ function App() {
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
+      <ToastContainer />
     </div>
   );
 }

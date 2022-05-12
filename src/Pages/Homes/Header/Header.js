@@ -13,7 +13,7 @@ const Header = () => {
         signOut(auth);
     }
     return (
-        <div className='container mx-auto'>
+        <div className=''>
             <Navbar collapseOnSelect sticky='top' expand="lg" bg="dark" variant="dark">
                 <Container>
                     <Navbar.Brand as={Link} to="/"><img
@@ -34,7 +34,7 @@ const Header = () => {
                             {
                                 user && <>
                                     <Nav.Link as={Link} to="/manageItems">Manage Items</Nav.Link>
-                                    <Nav.Link as={Link} to="/inventory">Add Item</Nav.Link>
+                                    <Nav.Link as={Link} to="/addItems">Add Item</Nav.Link>
                                     <Nav.Link as={Link} to="/myItems">My Items</Nav.Link>
                                 </>
 

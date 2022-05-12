@@ -1,14 +1,30 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 
 const MyItems = () => {
     const [products, setProducts] = useState([])
+    const [user] = useAuthState(auth)
+
+    // useEffect(() => {
+    //     const url = `http://localhost:5000/inventoryManage`;
+    //     fetch(url)
+    //         .then(res => res.json())
+    //         .then(data => setProducts(data))
+    // }, [])
 
     useEffect(() => {
-        const url = `http://localhost:5000/inventoryManage`;
-        fetch(url)
-            .then(res => res.json())
-            .then(data => setProducts(data))
-    }, [])
+        const getProducts = async () => {
+            const email = user.email;
+            console.log(email);
+            const url = `http://localhost:5000/myItems?email=${email}`;
+            const { data } = await axios.get(url)
+            setProducts(data)
+        }
+        getProducts()
+
+    }, [user])
     const handleToDelete = id => {
         const proceed = window.confirm('Will you delete a products???...')
         if (proceed) {

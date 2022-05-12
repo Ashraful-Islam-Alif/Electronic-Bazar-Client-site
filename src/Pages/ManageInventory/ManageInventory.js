@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import 'animate.css';
 import AddItem from '../AddItem/AddItem';
+import { Link } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 
 const ManageInventory = () => {
     const [products, setProducts] = useState([])
@@ -52,8 +54,12 @@ const ManageInventory = () => {
                     )
                 }
             </div>
-            <div className=' m-4'>
-                <AddItem></AddItem>
+            <div className='d-flex justify-content-center m-4'>
+                <Link to="/addItems">
+                    <Button className=" is-rounded btn btn-warning text-white ">
+                        <span>Add New Item</span>
+                    </Button>
+                </Link>
             </div>
 
         </div >
