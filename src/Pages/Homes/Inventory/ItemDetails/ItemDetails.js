@@ -8,7 +8,7 @@ const ItemDetails = () => {
     const [item, setItem] = useState({});
     const [isChange, setIsChange] = useState(false);
     useEffect(() => {
-        const url = `http://localhost:5000/inventory/${itemId}`
+        const url = `https://cryptic-castle-82329.herokuapp.com/inventory/${itemId}`
         fetch(url)
             .then(res => res.json())
             .then(data => setItem(data));
@@ -17,7 +17,7 @@ const ItemDetails = () => {
         const newStock = item.stock - 1
         console.log(id);
         // console.log(newStock);
-        const url = `http://localhost:5000/inventory/${id}`
+        const url = `https://cryptic-castle-82329.herokuapp.com/inventory/${id}`
         fetch(url, {
             method: "PUT",
             headers: {
@@ -37,7 +37,7 @@ const ItemDetails = () => {
         const newStock = item.stock + 1
         console.log(id);
         // console.log(newStock);
-        const url = `http://localhost:5000/inventory/${id}`
+        const url = `https://cryptic-castle-82329.herokuapp.com/inventory/${id}`
         fetch(url, {
             method: "PUT",
             headers: {

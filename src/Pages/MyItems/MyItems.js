@@ -10,7 +10,7 @@ const MyItems = () => {
     const [user] = useAuthState(auth)
     const navigate = useNavigate()
     // useEffect(() => {
-    //     const url = `http://localhost:5000/inventoryManage`;
+    //     const url = `https://cryptic-castle-82329.herokuapp.com/inventoryManage`;
     //     fetch(url)
     //         .then(res => res.json())
     //         .then(data => setProducts(data))
@@ -20,7 +20,7 @@ const MyItems = () => {
         const getProducts = async () => {
             const email = user.email;
             console.log(email);
-            const url = `http://localhost:5000/myItems?email=${email}`;
+            const url = `https://cryptic-castle-82329.herokuapp.com/myItems?email=${email}`;
             try {
                 const { data } = await axios.get(url, {
                     headers: {
@@ -43,7 +43,7 @@ const MyItems = () => {
     const handleToDelete = id => {
         const proceed = window.confirm('Will you delete a products???...')
         if (proceed) {
-            const url = `http://localhost:5000/inventory/${id}`;
+            const url = `https://cryptic-castle-82329.herokuapp.com/inventory/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

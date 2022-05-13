@@ -5,7 +5,7 @@ const Inventory = () => {
     const [items, setItems] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/inventory')
+        fetch('https://cryptic-castle-82329.herokuapp.com/inventory')
             .then(res => res.json())
             .then(data => setItems(data));
     }, [])

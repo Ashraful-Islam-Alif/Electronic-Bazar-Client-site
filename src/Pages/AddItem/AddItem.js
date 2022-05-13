@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 const AddItem = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
-        const url = 'http://localhost:5000/myItems';
+        const url = 'https://cryptic-castle-82329.herokuapp.com/myItems';
         fetch(url, {
             method: 'POST',
             headers: {
