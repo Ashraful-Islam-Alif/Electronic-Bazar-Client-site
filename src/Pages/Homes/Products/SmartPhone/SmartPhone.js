@@ -1,12 +1,8 @@
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useEffect, useState } from 'react';
-
 import phone1 from '../SmartPhone/phone1.jpg'
 import phone2 from '../SmartPhone/phone2.jpg'
 import phone3 from '../SmartPhone/phone3.jpg'
 import phone4 from '../SmartPhone/phone4.jpg'
-
+import './SmartPhone.css'
 
 const SmartPhone = () => {
 
@@ -16,7 +12,9 @@ const SmartPhone = () => {
             <div className="row row-cols-1 row-cols-md-2 g-4">
                 <div className="col">
                     <div className="card h-100">
-                        <img src={phone1} className="card-img-top" alt="..." />
+                        <div className=''>
+                            <img src={phone1} className="card-img-top hover1" alt="..." />
+                        </div>
                         <div className="card-body">
                             <h5 className="card-title">iPhone 13pro</h5>
                             <p><small>Rating: 4.9</small></p>
@@ -26,7 +24,7 @@ const SmartPhone = () => {
                 </div>
                 <div className="col">
                     <div className="card h-100">
-                        <img src={phone2} className="card-img-top" alt="..." />
+                        <img src={phone2} className="card-img-top hover1" alt="..." />
                         <div className="card-body">
                             <h5 className="card-title">Samsung Galaxy S22 Ultra</h5>
                             <p><small>Rating: 4.8</small></p>
@@ -36,7 +34,7 @@ const SmartPhone = () => {
                 </div>
                 <div className="col">
                     <div className="card h-100">
-                        <img src={phone3} className="card-img-top" alt="..." />
+                        <img src={phone3} className="card-img-top hover1" alt="..." />
                         <div className="card-body">
                             <h5 className="card-title">iPhone XR </h5>
                             <p><small>Rating: 4.6</small></p>
@@ -46,7 +44,7 @@ const SmartPhone = () => {
                 </div>
                 <div className="col">
                     <div className="card h-100">
-                        <img src={phone4} className="card-img-top" alt="..." />
+                        <img src={phone4} className="card-img-top hover1" alt="..." />
                         <div className="card-body">
                             <h5 className="card-title">Samsung Galaxy A32 </h5>
                             <p><small>Rating: 4.7</small></p>
