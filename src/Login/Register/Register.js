@@ -1,11 +1,12 @@
 import React, { useRef, useState } from 'react';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { Button, Form } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import { sendEmailVerification } from 'firebase/auth';
 import { async } from '@firebase/util';
 import auth from '../../firebase.init';
+import useToken from '../../hooks/useToken';
 
 const Register = () => {
     const [agree, setAgree] = useState(false)
@@ -13,18 +14,21 @@ const Register = () => {
     const emailRef = useRef('');
     const passwordRef = useRef('');
     const navigate = useNavigate();
+    let location = useLocation()
+    let from = location.state?.from?.pathname || "/";
     const [
         createUserWithEmailAndPassword,
         user,
         loading,
         error,
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    const [token] = useToken(user)
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
     const navigateLogin = event => {
         navigate('/login')
     }
-    if (user) {
-        console.log('user', user);
+    if (token) {
+        navigate(from, { replace: true });
     }
     const handleSubmit = async (event) => {
         event.preventDefault();

@@ -18,7 +18,7 @@ const MyItems = () => {
 
     useEffect(() => {
         const getProducts = async () => {
-            const email = user.email;
+            const email = user?.email;
             console.log(email);
             const url = `https://cryptic-castle-82329.herokuapp.com/myItems?email=${email}`;
             try {

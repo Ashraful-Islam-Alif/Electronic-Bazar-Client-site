@@ -9,6 +9,7 @@ import { ToastContainer, toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../firebase.init';
+import useToken from '../../hooks/useToken';
 import SocialLogin from '../SocialLogin/SocialLogin';
 
 
@@ -26,15 +27,12 @@ const Login = () => {
     let location = useLocation();
     let errorElement;
     const [item, setItem] = useState()
-
+    const [token] = useToken()
     const handleSubmit = async event => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
         await signInWithEmailAndPassword(email, password);
-        const { data } = await axios.post('https://cryptic-castle-82329.herokuapp.com/login', { email });
-        localStorage.setItem('accessToken', data.accessToken)
-        navigate(from, { replace: true });
     }
     let from = location.state?.from?.pathname || "/";
     const navigateRegister = event => {
@@ -50,8 +48,8 @@ const Login = () => {
             toast('please enter your email address')
         }
     }
-    if (user) {
-        // navigate(from, { replace: true });
+    if (token) {
+        navigate(from, { replace: true });
     }
 
     if (loading) {
