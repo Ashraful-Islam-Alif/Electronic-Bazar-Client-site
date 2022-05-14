@@ -1,7 +1,10 @@
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
-
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from "../../firebase.init";
 const AddItem = () => {
+    const [user] = useAuthState(auth);
+
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
         const url = 'https://cryptic-castle-82329.herokuapp.com/myItems';
@@ -26,7 +29,7 @@ const AddItem = () => {
             <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
                 <input placeholder='Photo URL' className='mb-2' type="text" {...register("img")} />
                 {/* <input type="text" name="email" className='mb-2' {...register("name", { required: true, maxLength: 20 })} /> */}
-                <input placeholder='Email Address' className='mb-2' {...register("email")} />
+                <input placeholder='Email Address' disabled value={user?.email} className='mb-2' {...register("email")} />
                 <input placeholder='Product Name' className='mb-2' {...register("name", { required: true, maxLength: 20 })} />
                 <input placeholder='Supplier Name' className='mb-2' {...register("supplier", { required: true, maxLength: 20 })} />
                 <textarea placeholder='Description' className='mb-2' {...register("details")} />

@@ -13,6 +13,7 @@ const ManageInventory = () => {
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
+
     const handleToDelete = id => {
         const proceed = window.confirm('Will you delete a products???...')
         if (proceed) {
@@ -36,7 +37,7 @@ const ManageInventory = () => {
                 {
                     products.map(product =>
 
-                        <div class="col">
+                        <div key={product._id} class="col">
                             <div class="card h-100">
                                 <img style={{ width: "350px", height: "250px" }} src={product.img} class="card-img-top img-fluid img-thumbnail rounded mx-auto d-block" alt="..." />
                                 <div class="card-body">
